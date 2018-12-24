@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat/Montserrat-Black.ttf);
+    src: url(../fonts/Montserrat/Montserrat-BlackItalic.ttf);
+    src: url(../fonts/Montserrat/Montserrat-Bold.ttf);
+    src: url(../fonts/Montserrat/Montserrat-BoldItalic.ttf);
+    src: url(../fonts/Montserrat/Montserrat-ExtraBold.ttf);
+    src: url(../fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf);
+    src: url(../fonts/Montserrat/Montserrat-ExtraLight.ttf);
+    src: url(../fonts/Montserrat/Montserrat-ExtraLightItalic.ttf);
+    src: url(../fonts/Montserrat/Montserrat-Italic.ttf);
+    src: url(../fonts/Montserrat/Montserrat-Light.ttf);
+    src: url(../fonts/Montserrat/Montserrat-LightItalic.ttf);
+    src: url(../fonts/Montserrat/Montserrat-Medium.ttf);
+    src: url(../fonts/Montserrat/Montserrat-MediumItalic.ttf);
+    src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+    src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
+    src: url(../fonts/Montserrat/Montserrat-SemiBoldItalic.ttf);
+    src: url(../fonts/Montserrat/Montserrat-Thin.ttf);
+    src: url(../fonts/Montserrat/Montserrat-ThinItalic.ttf);
+}
+
+body {
+    font-family: Montserrat;
+    background-color: #dfe0e1;
+}
+
+/* NAVIGATION */
+
+#nav-menu {
+    background-color: #dfe0e1;
+    height: 70px;
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#nav-menu ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#nav-menu li {
+    list-style-type: none;
+    padding: 0;
+    height: 24px;
+    margin: 10px 10px;
+    display: inline;
+}
+
+#nav-menu img {
+    float: left;
+    width: 50px;
+}
+
+li a {
+    display: inline-block;
+    color: #212a32;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#menu-right {
+    vertical-align: middle;
+    height: 100%;
+    float: right;
+}
+
+#menu-left {
+    vertical-align: middle;
+    height: 100%;
+    float: left;
+}
+
+#logo {
+    text-decoration: none;
+}
+
+#logo h1 {
+    font-weight: 700;
+    color: #212a32;
+    display: inline;
+}
+
+#logo h1:hover {
+    color: #33bb8e;
+    /*color: #e21566;*/
+}
+
+#menu-right a:hover {
+    color: #33bb8e;
+}
+
+
+/* MAIN */
+
+.title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #e21566;
+}
+
+.container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sample-obj {
+    padding: 10px;
+    background-color: #dfe0e1;
+    color: #212a32;
+    text-decoration: none;
+    border-radius: 20px;
+    border: #212a32 solid 3px;
+    width: 300px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.sample-obj:hover h4 {
+    color: #33bb8e;
+}
+
+.button {
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #33bb8e;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.button:hover {
+    color: #dfe0e1;
+}
+
+.quote {
+    font-weight: 400;
+    text-align: center;
+}

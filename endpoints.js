@@ -4,13 +4,25 @@ const path = require('path');
 const fs = require('fs');
 
 router.get('/', (req, res, next) => {
-  res.render('gravity');
-  next();
+  res.render('index', {
+    sample: [{
+      title: 'Intro data science',
+      link: '/project/datascience1',
+      description: 'Sample intro data science project'
+    },{
+      title: 'Gravitation',
+      link: '/project/gravity',
+      description: 'Sample gravitation simulation'
+    }]
+  });
 });
 
-router.get('/test', (req, res, next) => {
+router.get('/project/datascience1', (req, res, next) => {
+  res.render('datascience_intro');
+});
+
+router.get('/project/gravity1', (req, res, next) => {
   res.render('gravity');
-  next();
 });
 
 module.exports = router;

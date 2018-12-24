@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const exphb = require('express-handlebars');
+const handlebars = require('express-handlebars');
 const ejs = require('ejs');
 const expressValidator = require('express-validator');
 const bodyParser = require('body-parser');
@@ -8,8 +8,10 @@ const logger = require('morgan');
 const routes = require('./endpoints');
 const path = require('path');
 
-app.set('views', path.join(__dirname, 'static/html'));
-app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.engine('handlebars', handlebars({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+app.enable('view cache');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -18,9 +20,6 @@ app.use(express.static(path.join(__dirname, 'static')));
 
 app.use('/', routes);
 
-app.use(function(req, res, next) {
-  next(createError(404));
-});
 
 app.use(function(err, req, res, next) {
   res.locals.message = err.message;

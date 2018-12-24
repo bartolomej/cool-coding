@@ -1,0 +1,16 @@
+<div class="container">
+    <div>
+        <p class="quote">Eat, sleep, code, repeat!</p>
+    </div>
+    <h3 class="title">Our Projects</h3>
+        {{#each sample}}
+            <a class="sample-obj" style="display: block" href="{{link}}">
+                <div id="sample">
+                    <h4>{{title}}</h4>
+                    <p>{{description}}</p>
+                </div>
+            </a>
+        {{/each}}
+</div>
+
+<script src="/js/gravity.js"></script>
