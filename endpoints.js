@@ -18,7 +18,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/project/datascience1', (req, res, next) => {
-  res.render('datascience_intro');
+  res.render('text-analyzer');
 });
 
 router.get('/project/gravity1', (req, res, next) => {
