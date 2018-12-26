@@ -1,4 +1,4 @@
-export class HashTable {
+export default class HashTable {
   constructor(size) {
     this.size = size;
     this.array = [];

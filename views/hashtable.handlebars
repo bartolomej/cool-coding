@@ -1,0 +1,46 @@
+<div>
+    <h4 class="title">HashTable data structure DEMO</h4>
+    <input type="text" placeholder="Input key ..." id="keyInput"/>
+    <input type="text" placeholder="Input value ..." id="valueInput"/>
+    <a><button class="button" id="addB">ADD</button></a>
+    <a><button class="button" id="getB">GET</button></a><br>
+    <b id="output"></b>
+    <pre id="display"></pre>
+</div>
+<div class="canvas-container">
+    <canvas id="my_canvas"></canvas>
+</div>
+<script src="/js/codemirror/lib/codemirror.js"></script>
+<script src="/js/codemirror/mode/javascript/javascript.js"></script>
+<script>
+    var myCodeMirror = CodeMirror(document.body, {
+        value:
+`export default class HashTable {
+    constructor(size) {
+        this.size = size;
+        this.array = [];
+    }
+
+    add(key, object) {
+        this.array[this.computeHash(key)] = object;
+    }
+
+    get(key) {
+        return this.array[this.computeHash(key)];
+    }
+
+    computeHash(string) {
+        let sumChar = 0;
+        for (let i = 0; i < string.length; i++)
+           sumChar += string.charCodeAt(i);
+        return sumChar % this.size;
+    }
+}`,
+        mode:  "javascript",
+        json: true,
+        theme: 'darcula',
+        lineNumbers: true,
+        readOnly: 'nocursor'
+    });
+</script>
+<script src="/js/data-structures/index.js"></script>

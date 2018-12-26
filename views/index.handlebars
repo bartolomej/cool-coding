@@ -1,16 +1,20 @@
 <div class="container">
+    <h3 class="title">Projects</h3>
     <div>
-        <p class="quote">Eat, sleep, code, repeat!</p>
-    </div>
-    <h3 class="title">Our Projects</h3>
-        {{#each sample}}
-            <a class="sample-obj" style="display: block" href="{{link}}">
-                <div id="sample">
-                    <h4>{{title}}</h4>
-                    <p>{{description}}</p>
-                </div>
-            </a>
+        {{#each domain}}
+            <div class="domains">
+                <h4>{{title}}</h4>
+                <hr class="h-line">
+                {{#each project}}
+                    <a class="sample-obj" style="display: block" href="{{link}}">
+                        <div id="sample">
+                            <h4>{{title}}</h4>
+                            <img class="img-preview" src="{{img}}">
+                            <p>{{description}}</p>
+                        </div>
+                    </a>
+                {{/each}}
+            </div>
         {{/each}}
+    </div>
 </div>
-
-<script src="/js/gravity.js"></script>

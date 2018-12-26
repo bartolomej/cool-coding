@@ -14,6 +14,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/mejkoz/minisimulations#readme",
   "dependencies": {
+    "codemirror": "^5.42.2",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
