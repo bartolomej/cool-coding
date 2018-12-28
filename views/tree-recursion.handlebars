@@ -1,13 +1,13 @@
 <div>
     <h4 class="title">Recursive fractal tree</h4>
     <div class="control-container">
-        Line length:<input type="range" min="10" max="100" value="50" class="slider" id="length-input"/><br>
-        Line width:<input type="range" min="1" max="4" value="1" class="slider" id="width-input"/><br>
-        Scale:<input type="range" min="0.1" max="0.9" value="0.4" class="slider" id="scale-input"/><br>
-        Angle:<input type="range" min="0.1" max="0.9" value="0.4" class="slider" id="angle-input"/><br>
+        Line length:<input type="range" min="10" max="80" value="50" class="slider" id="length-input"/><span id="length"></span><br>
+        Line width:<input type="range" min="10" max="400" value="100" class="slider" id="width-input"/><span id="width"></span><br>
+        Scale:<input type="range" min="10" max="82" value="40" class="slider" id="scale-input"/><span id="scale"></span><br>
+        Angle:<input type="range" min="10" max="80" value="40" class="slider" id="angle-input"/><span id="angle"></span><br>
         <a><button class="button" id="computeT" >COMPUTE</button></a>
     </div>
 </div>
 
-<canvas style="width: 100%; height: 1000px;" id="canvas"></canvas>
+<canvas style="width: 100%; height: 500px;" id="canvas"></canvas>
 <script src="/js/recursion/tree-recursion.js"></script>

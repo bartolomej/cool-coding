@@ -42,7 +42,7 @@ router.get('/', (req, res, next) => {
       project: [{
         title: 'Text analyzer',
         link: '/project/data-science/text-analyzer',
-        img: 'some img',
+        img: '/images/data-science.png',
         description: 'Simple text analyzer with graphic representation of data'
       }]
     }]
