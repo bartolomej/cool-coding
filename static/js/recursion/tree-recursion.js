@@ -2,19 +2,21 @@ const lengthInput = document.getElementById('length-input');
 const widthInput = document.getElementById('width-input');
 const angleInput = document.getElementById('angle-input');
 const scaleInput = document.getElementById('scale-input');
-const computeT = document.getElementById('computeT');
+const clearInput = document.getElementById('clear-input');
+const colorInput = document.getElementById('color-input');
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
 
 
-canvas.width = canvas.parentElement.clientWidth;
-canvas.height = canvas.parentElement.clientHeight;
+window.onload = function () {
+  canvas.width = canvas.parentElement.clientWidth;
+  canvas.height = canvas.parentElement.clientHeight;
 
-listener("mousedown");
-listener("mousemove");
-listener("keydown");
+  read("mousemove");
+  read("keydown");
+};
 
-function listener(eventType) {
+function read(eventType) {
   let prevLength = 50;
   let prevWidth = 1;
   let prevAngle = 0.4;
@@ -60,7 +62,18 @@ function listener(eventType) {
     });
   });
 
-  computeT.addEventListener('click', () => updateDraw());
+  clearInput.addEventListener('change', () => {
+    window.requestAnimationFrame( () => {
+      updateDraw();
+    });
+  });
+
+  rotationInput.addEventListener('change', () => {
+    window.requestAnimationFrame( () => {
+      updateDraw();
+    });
+  });
+
 }
 
 
@@ -69,14 +82,16 @@ function updateDraw() {
     Number.parseFloat(angleInput.value)/100,
     Number.parseFloat(scaleInput.value)/100,
     Number.parseFloat(widthInput.value)/100,
-    Number.parseInt(lengthInput.value));
+    Number.parseInt(lengthInput.value),
+    clearInput.checked,
+    colorInput.checked);
 }
 
 
-function drawTree(ctx, angle, scale, width, length, clear = true) {
+function drawTree(ctx, angle, scale, width, length, clear = true, color = false) {
   ctx.resetTransform();
   if (clear) ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.translate(canvas.width/2, canvas.height/2);
+  ctx.translate(canvas.width/2, canvas.height/1.7);
   ctx.rotate(Math.PI);
   ctx.save();
   branch(length, angle, scale);
@@ -87,9 +102,18 @@ function drawTree(ctx, angle, scale, width, length, clear = true) {
     ctx.save();
     ctx.translate(0, length);
     ctx.rotate(-angle);
+    if (color) ctx.fillStyle = getRndColor();
     branch(length * scale, angle, scale);
     ctx.rotate(angle * 2);
+    if (color) ctx.fillStyle = getRndColor();
     branch(length * scale, angle, scale);
     ctx.restore();
+  }
+
+  function getRndColor() {
+    let r = 255*Math.random()| 0,
+      g = 255*Math.random()| 0,
+      b = 255*Math.random()| 0;
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
   }
 }
