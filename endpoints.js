@@ -32,6 +32,11 @@ router.get('/', (req, res, next) => {
         img: '/images/recursive-tree.png',
         description: 'Recursive self similar fractal tree'
       }, {
+        title: 'Recursive three branch tree',
+        link: '/projects/algorithms/recursive-three-branch',
+        img: '/images/recursive-tree.png',
+        description: 'Recursive three branch tree'
+      }, {
         title: 'Recursive fractal circle',
         link: '/project/algorithms/recursive-circle',
         img: '/images/recursive-tree.png',
@@ -44,6 +49,14 @@ router.get('/', (req, res, next) => {
         link: '/project/data-science/text-analyzer',
         img: '/images/data-science.png',
         description: 'Simple text analyzer with graphic representation of data'
+      }]
+    }, {
+      title: 'Mathematics',
+      project: [{
+        title: 'Sine waves',
+        link: '/project/math/sine-waves',
+        img: '',
+        description: 'Fourier series sine wave'
       }]
     }]
   });
@@ -65,12 +78,20 @@ router.get('/project/algorithms/recursive-tree', (req, res, next) => {
   res.render('tree-recursion');
 });
 
+router.get('/project/algorithms/recursive-three-branch', (req, res, next) => {
+  res.render('three-branch-tree');
+});
+
 router.get('/project/algorithms/recursive-circle', (req, res, next) => {
   res.render('circle-recursion');
 });
 
 router.get('/project/data-science/text-analyzer', (req, res, next) => {
   res.render('text-analyzer');
+});
+
+router.get('/project/math/sine-waves', (req, res, next) => {
+  res.render('fourier');
 });
 
 module.exports = router;

@@ -1,0 +1,24 @@
+<div>
+    <h4 class="title">Fourier Series</h4>
+    <div class="control-container" style="height: 110px;">
+        <div style="float: left">
+            Line length <br>
+            Line width <br>
+            Scale <br>
+            Angle <br>
+            Clear <br>
+            Color <br>
+        </div>
+        <div style="float: right">
+            <input type="range" min="10" max="150" value="50" class="slider" id="length-input"/><span id="length"></span><br>
+            <input type="range" min="10" max="400" value="100" class="slider" id="width-input"/><span id="width"></span><br>
+            <input type="range" min="10" max="75" value="40" class="slider" id="scale-input"/><span id="scale"></span><br>
+            <input type="range" min="10" max="75" value="40" class="slider" id="angle-input"/><span id="angle"></span><br>
+            <input type="checkbox" id="clear-input"/><br>
+            <input type="checkbox" id="color-input"/><br>
+        </div>
+    </div>
+</div>
+
+<canvas id="canvas"></canvas>
+<script src="/js/fourier-intro.js"></script>
