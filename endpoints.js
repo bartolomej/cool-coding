@@ -33,7 +33,7 @@ router.get('/', (req, res, next) => {
         description: 'Recursive self similar fractal tree'
       }, {
         title: 'Recursive three branch tree',
-        link: '/projects/algorithms/recursive-three-branch',
+        link: '/project/algorithms/recursive-three-branch',
         img: '/images/recursive-tree.png',
         description: 'Recursive three branch tree'
       }, {

@@ -4,29 +4,23 @@
 }
 
 @font-face {
-    font-family: Montserrat;
-    src: url(../fonts/Montserrat/Montserrat-Black.ttf);
-    src: url(../fonts/Montserrat/Montserrat-BlackItalic.ttf);
-    src: url(../fonts/Montserrat/Montserrat-Bold.ttf);
-    src: url(../fonts/Montserrat/Montserrat-BoldItalic.ttf);
-    src: url(../fonts/Montserrat/Montserrat-ExtraBold.ttf);
-    src: url(../fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf);
-    src: url(../fonts/Montserrat/Montserrat-ExtraLight.ttf);
-    src: url(../fonts/Montserrat/Montserrat-ExtraLightItalic.ttf);
-    src: url(../fonts/Montserrat/Montserrat-Italic.ttf);
-    src: url(../fonts/Montserrat/Montserrat-Light.ttf);
-    src: url(../fonts/Montserrat/Montserrat-LightItalic.ttf);
-    src: url(../fonts/Montserrat/Montserrat-Medium.ttf);
-    src: url(../fonts/Montserrat/Montserrat-MediumItalic.ttf);
-    src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
-    src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
-    src: url(../fonts/Montserrat/Montserrat-SemiBoldItalic.ttf);
-    src: url(../fonts/Montserrat/Montserrat-Thin.ttf);
-    src: url(../fonts/Montserrat/Montserrat-ThinItalic.ttf);
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Black.ttf);
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+    src: url(../fonts/Roboto/Roboto-Light.ttf);
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: Hind;
+    src: url(../fonts/Hind/Hind-Bold.ttf);
+    src: url(../fonts/Hind/Hind-Light.ttf);
+    src: url(../fonts/Hind/Hind-Medium.ttf);
+    src: url(../fonts/Hind/Hind-Regular.ttf);
 }
 
 body {
-    font-family: Montserrat;
+    font-family: Hind;
     background-color: #dfe0e1;
 }
 
@@ -101,7 +95,7 @@ li a {
 /* MAIN */
 
 .title {
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
     margin-bottom: 30px;
     color: #e21566;
@@ -143,6 +137,7 @@ div.domains {
 }
 
 .sample-obj {
+    font-weight: 300;
     padding: 10px;
     background-color: #dfe0e1;
     color: #212a32;
@@ -153,6 +148,14 @@ div.domains {
     text-align: center;
     margin: 20px auto;
     transition: 0.4s;
+}
+
+.sample-title {
+    font-size: 15px;
+}
+
+.sample-description {
+    font-size: 13px;
 }
 
 .sample-obj:hover h4 {
@@ -168,7 +171,6 @@ div.domains {
     width: 100px;
     border-radius: 10px;
     background-color: #33bb8e;
-    font-family: Montserrat;
     font-weight: 600;
     font-size: 15px;
 }
