@@ -7,6 +7,37 @@ const fs = require('fs');
 router.get('/', (req, res, next) => {
   res.render('index', {
     domain: [{
+      title: 'Mathematics',
+      project: [{
+        title: 'Sine waves',
+        link: '/project/math/sine-waves',
+        img: '/images/trigo.png',
+        description: 'Fourier series sine wave'
+      }, {
+        title: 'Trig motion',
+        link: '/project/math/trig',
+        img: '/images/trigo.png',
+        description: 'Circular motion'
+      }]
+    }, {
+      title: 'Algorithms',
+      project: [{
+        title: 'Recursive fractal tree',
+        link: '/project/algorithms/recursive-tree',
+        img: '/images/recursive-tree.png',
+        description: 'Recursive self similar fractal tree'
+      }, {
+        title: 'Recursive three branch tree',
+        link: '/project/algorithms/recursive-three-branch',
+        img: '/images/recursive-tree.png',
+        description: 'Recursive three branch tree'
+      }, {
+        title: 'Recursive fractal circle',
+        link: '/project/algorithms/recursive-circle',
+        img: '/images/recursive-tree.png',
+        description: 'Recursive self similar fractal circle pattern'
+      }]
+    }, {
       title: 'Data Structures',
       project: [{
         title: 'Hash table',
@@ -25,38 +56,12 @@ router.get('/', (req, res, next) => {
         description: 'Simple JavaScript Queue data structure'
       }]
     },{
-      title: 'Algorithms',
-      project: [{
-        title: 'Recursive fractal tree',
-        link: '/project/algorithms/recursive-tree',
-        img: '/images/recursive-tree.png',
-        description: 'Recursive self similar fractal tree'
-      }, {
-        title: 'Recursive three branch tree',
-        link: '/project/algorithms/recursive-three-branch',
-        img: '/images/recursive-tree.png',
-        description: 'Recursive three branch tree'
-      }, {
-        title: 'Recursive fractal circle',
-        link: '/project/algorithms/recursive-circle',
-        img: '/images/recursive-tree.png',
-        description: 'Recursive self similar fractal circle pattern'
-      }]
-    },{
       title: 'Data Science',
       project: [{
         title: 'Text analyzer',
         link: '/project/data-science/text-analyzer',
         img: '/images/data-science.png',
         description: 'Simple text analyzer with graphic representation of data'
-      }]
-    }, {
-      title: 'Mathematics',
-      project: [{
-        title: 'Sine waves',
-        link: '/project/math/sine-waves',
-        img: '',
-        description: 'Fourier series sine wave'
       }]
     }]
   });
@@ -93,5 +98,9 @@ router.get('/project/data-science/text-analyzer', (req, res, next) => {
 router.get('/project/math/sine-waves', (req, res, next) => {
   res.render('fourier');
 });
+
+router.get('/project/math/trig', (req, res, next) => {
+  res.render('trig');
+})
 
 module.exports = router;
